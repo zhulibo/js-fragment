@@ -14,7 +14,7 @@ module.exports = {
   },
 };
 
+// 手动修改版本号
 // git add -A
 // git commit -m '666'
-// npm version patch/minor/major 升级修订版本号/次版本号/主版本号
 // npm publish
