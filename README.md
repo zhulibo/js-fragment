@@ -1,8 +1,8 @@
 # js-fragment
 
-## 使用方法
+## how to use
 ```
-// 示例
+// Example
 import { deepCopy } from 'js-fragment'
 
 const obj = {
@@ -11,4 +11,4 @@ const obj = {
 }
 const newObj = deepCopy(obj)
 ```
-更多函数可查看 node_modules/packages/utils.js
+see more function in node_modules/packages/utils.js
