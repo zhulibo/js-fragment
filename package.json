@@ -1,24 +1,28 @@
 {
   "name": "js-fragment",
-  "version": "1.0.3",
-  "license": "MIT",
+  "version": "1.0.4",
   "description": "一些js公共方法",
-  "author": "zhu",
-  "keywords": [
-    "js",
-    "utils"
-  ],
+  "main": "./index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "lib": "webpack --config webpack.lib.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhulibo/js-fragment.git"
   },
-  "main": "./index.js",
-  "scripts": {
-    "serve": "webpack-dev-server",
-    "build": "webpack",
-    "lib": "webpack --config webpack.lib.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": [
+    "js",
+    "utils"
+  ],
+  "author": "zhu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhulibo/js-fragment/issues"
   },
+  "homepage": "https://github.com/zhulibo/js-fragment#readme",
+  "dependencies": {},
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.69.0",

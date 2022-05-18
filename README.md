@@ -11,4 +11,4 @@ const obj = {
 }
 const newObj = deepCopy(obj)
 ```
-
+更多函数可查看 node_modules/packages/utils.js
