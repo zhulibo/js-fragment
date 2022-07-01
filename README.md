@@ -1,6 +1,6 @@
-# js-fragment
+# js-fragment [![npm](https://img.shields.io/npm/v/js-fragment.svg)](https://www.npmjs.com/package/js-fragment)
 
-## how to use
+## usage
 ```
 // Example
 import { deepCopy } from 'js-fragment'
@@ -11,4 +11,4 @@ const obj = {
 }
 const newObj = deepCopy(obj)
 ```
-see more function in node_modules/packages/utils.js
+
