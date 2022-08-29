@@ -12,3 +12,22 @@ const obj = {
 const newObj = deepCopy(obj)
 ```
 
+## all function
+
+type
+
+deepCopy
+
+debounce
+
+throttle
+
+uuid
+
+to
+
+getUrlParam
+
+dataUrl2Blob
+
+wait

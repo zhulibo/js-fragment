@@ -64,7 +64,7 @@ export function throttle(fn, delay = 200, immediate = false) {
 }
 
 // 生成随机id
-export function uid(length, chars) {
+export function uuid(length, chars) {
   chars = chars || '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
   length = length || 8
   let result = ''
@@ -106,17 +106,8 @@ export function dataUrl2Blob(dataUrl, type) {
   return new Blob([arr], {type: type || mime})
 }
 
-// 获取文件后缀名
-export function getExt(filename) {
-  if (typeof filename == 'string') {
-    return filename.split('.').pop().toLowerCase()
-  } else {
-    throw new Error('filename must be a string type')
-  }
-}
-
 // 同步等待
-export function sleep(delay) {
+export function wait(delay) {
   let start = (new Date()).getTime()
   while ((new Date()).getTime() - start < delay) {
     continue
