@@ -113,3 +113,34 @@ export function wait(delay) {
     continue
   }
 }
+
+// 遍历筛选节点
+export function getNodeIterator(filterNode) {
+  return document.createNodeIterator(
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    {
+      acceptNode(node) {
+        return filterNode(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    }
+  )
+}
+
+// 添加样式
+export function addStyle(css){
+  let style=document.createElement('style')
+  let head=document.head||document.getElementsByTagName('head')[0]
+  style.appendChild(document.createTextNode(css))
+  head.appendChild(style)
+}
+
+// 添加样式链接
+export function addStyleUrl(url) {
+  let link = document.createElement('link')
+  link.type = 'text/css'
+  link.rel = 'stylesheet'
+  link.href = url
+  let head = document.getElementsByTagName('head')[0]
+  head.appendChild(link)
+}

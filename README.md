@@ -31,3 +31,9 @@ getUrlParam
 dataUrl2Blob
 
 wait
+
+getNodeIterator
+
+addStyle
+
+addStyleUrl
