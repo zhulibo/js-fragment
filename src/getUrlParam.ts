@@ -6,6 +6,7 @@ export function getUrlParam(url = location.href) {
     let items = param.split('&')
     for (let item of items) {
       let arr = item.split('=')
+      // @ts-ignore
       obj[arr[0]] = arr[1]
     }
   }

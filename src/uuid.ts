@@ -1,5 +1,5 @@
 // 生成随机id
-export function uuid(length, chars) {
+export function uuid(length?: number, chars?: string) {
   chars = chars || '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
   length = length || 8
   let result = ''

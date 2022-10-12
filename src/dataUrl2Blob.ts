@@ -1,7 +1,7 @@
 // base64转blob
-export function dataUrl2Blob(dataUrl, type) {
+export function dataUrl2Blob(dataUrl: string, type?: string) {
   let data = dataUrl.split(',')[1]
-  let mime = dataUrl.match(/^data:(.*?)(;base64)?,/)[1]
+  let mime = dataUrl.match(/^data:(.*?)(;base64)?,/)![1]
   let binStr = atob(data)
   let len = binStr.length
   let arr = new Uint8Array(len)

@@ -1,5 +1,5 @@
 // 添加样式链接
-export function addStyleUrl(url) {
+export function addStyleUrl(url: string) {
   let link = document.createElement('link')
   link.type = 'text/css'
   link.rel = 'stylesheet'

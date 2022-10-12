@@ -1,5 +1,5 @@
 // 遍历筛选节点
-export function getNodeIterator(filterNode) {
+export function getNodeIterator(filterNode: Function) {
   return document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
