@@ -1,1 +1,1 @@
-export declare function to(promise: any): any;
+export declare function to(promise: Promise<any>): Promise<any[]>;

@@ -11,7 +11,12 @@ export default {
     {
       file: pkg.module,
       format: 'es',
-    }
+    },
+    {
+      file: './lib/index.umd.js',
+      format: 'umd',
+      name: 'fragment',
+    },
   ],
   plugins: [
     typescript({
@@ -25,4 +30,4 @@ export default {
   ]
 }
 
-// todo 类型 cjs、esm导入测试 jest测试
+// todo 类型 cjs、es、umd导入测试 jest测试
