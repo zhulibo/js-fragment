@@ -14,26 +14,27 @@ const newObj = deepCopy(obj)
 
 ## all function
 
-type
-
-deepCopy
-
-debounce
-
-throttle
-
-uuid
-
-to
-
-getUrlParam
-
-dataUrl2Blob
-
-wait
-
-getNodeIterator
-
 addStyle
 
 addStyleUrl
+
+dataUrl2Blob
+
+debounce
+
+deepCopy
+
+getNodeIterator
+
+getUrlParam
+
+throttle
+
+to
+
+type
+
+uuid
+
+wait
+
