@@ -30,10 +30,4 @@ export default {
   ]
 }
 
-// 手动修改版本号
-// npm run build
-// git add -A
-// git commit -m '666'
-// npm publish
-
 // todo cjs、es、umd导入测试 jest测试
