@@ -6,7 +6,7 @@
 import { deepCopy } from 'js-fragment'
 
 const obj = {
-  name: '小明',
+  name: 'test',
   age: 18
 }
 const newObj = deepCopy(obj)
@@ -37,4 +37,3 @@ type
 uuid
 
 wait
-

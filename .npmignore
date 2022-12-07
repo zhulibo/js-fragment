@@ -1,7 +1,6 @@
 .DS_Store
 node_modules
 /dist
-/test
 
 # local env files
 .env.local
@@ -23,6 +22,9 @@ pnpm-debug.log*
 *.sw?
 
 # npm忽略文件
-/examples
-webpack.config.js
-webpack.lib.config.js
+/src
+/playground
+/test
+.editorconfig
+rollup.config.js
+tsconfig.json

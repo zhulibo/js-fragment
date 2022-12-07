@@ -29,5 +29,3 @@ export default {
     })
   ]
 }
-
-// todo cjs、es、umd导入测试 jest测试
