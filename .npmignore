@@ -22,9 +22,5 @@ pnpm-debug.log*
 *.sw?
 
 # npm忽略文件
-/src
+/coverage
 /playground
-/test
-.editorconfig
-rollup.config.js
-tsconfig.json

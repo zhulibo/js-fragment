@@ -1,20 +1,67 @@
-// 节流
-export function throttle(fn: Function, delay = 200, immediate = false) {
-  let canRun = true
-  let count = 0 // 外部函数调用次数
-  return function () {
-    count++
-    if (immediate && count === 1) { // 立即执行条件下的第一次调用
-      // @ts-ignore
-      fn.apply(this, arguments)
+/**
+ * Throttle a function.
+ *
+ * @param {Function} fn The function to throttle.
+ * @param {number} [delay=200] The number of milliseconds to delay.
+ * @param {boolean} [immediate=true] Invoke immediately.
+ * @returns {Function} The new throttled function.
+ * @returns {Function.cancel} Cancel throttle.
+ */
+export function throttle<T extends (...args: any[]) => ReturnType<T>>(
+  fn: T,
+  delay: number = 200,
+  immediate: boolean = true
+): {
+  (this: ThisParameterType<T>, ...args: Parameters<T>): void;
+  cancel: () => void
+} {
+
+  let lastCallTime: number | null = null;
+  // 追加fn调用的定时器
+  let addedCallTimeout: ReturnType<typeof setTimeout> | null = null
+
+  const _throttle = function(this: ThisParameterType<T>, ...args: Parameters<T>) {
+
+    const now = Date.now()
+
+    // 立即执行
+    if(immediate) {
+      if (!lastCallTime) {
+        fn.apply(this, args)
+        lastCallTime = now
+      }
+      else if (now - lastCallTime >= delay) {
+        fn.apply(this, args)
+        lastCallTime = now
+      }
     }
-    if (canRun) {
-      canRun = false
-      setTimeout(() => {
-        // @ts-ignore
-        (count > 1 || !immediate) && fn.apply(this, arguments) // 立即执行条件下多次调用，或非立即执行条件下，执行fn
-        canRun = true
-      }, delay)
+    // 非立即执行
+    else {
+      if (!lastCallTime) {
+        lastCallTime = now
+        // 用定时器追加一次fn调用，防止未达到最小时间间隔fn未被调起
+        addedCallTimeout = setTimeout(() => {
+          fn.apply(this, args)
+          lastCallTime = Date.now()
+        }, delay)
+      }
+      else if (now - lastCallTime >= delay) {
+        fn.apply(this, args)
+        lastCallTime = now
+        // 达到最小时间间隔fn调用成功，则清除追加的fn调用
+        if (addedCallTimeout) {
+          clearTimeout(addedCallTimeout)
+        }
+      }
     }
+
   }
+
+  // 取消节流
+  _throttle.cancel = () => {
+    if (addedCallTimeout) clearTimeout(addedCallTimeout)
+    lastCallTime = null
+  }
+
+  return _throttle
 }

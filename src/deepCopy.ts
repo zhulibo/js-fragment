@@ -1,17 +1,25 @@
-// 深拷贝
-export function deepCopy<T>(obj: T, map = new Map()): T {
-  if (typeof obj === 'object') {
-    let res = Array.isArray(obj) ? [] : {}
-    if (map.get(obj)) {
-      return map.get(obj)
+/**
+ * Deep copies.
+ *
+ * @param {*} target Target value to be copied.
+ * @returns {*} The deep copy of the target.
+ */
+
+const map = new Map()
+
+export function deepCopy<T>(target: T): T {
+  if (typeof target === 'object') {
+    const res = Array.isArray(target) ? [] : {}
+    if (map.get(target)) {
+      return map.get(target)
     }
-    map.set(obj, res)
-    for (const key in obj) {
-      // @ts-ignore
-      res[key] = deepCopy(obj[key], map)
+    map.set(target, res)
+    for (const key in target) {
+      (res as any)[key] = deepCopy(target[key])
     }
     return res as T
-  } else {
-    return obj
+  }
+  else {
+    return target
   }
 }
