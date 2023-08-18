@@ -1,5 +1,6 @@
 import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json' assert { type: "json" };
+import {banner} from "./src/banner.js";
 
 export default {
   input: './src/index.ts',
@@ -7,15 +8,18 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
+      banner
     },
     {
       file: pkg.module,
       format: 'es',
+      banner
     },
     {
       file: './lib/index.umd.js',
       format: 'umd',
       name: 'fragment',
+      banner
     },
   ],
   plugins: [

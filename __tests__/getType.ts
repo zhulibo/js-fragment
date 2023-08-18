@@ -1,4 +1,4 @@
-import { getType } from '../src/getType'
+import { getType } from '../src/fragment/getType'
 
 describe('test getType', () => {
   test('it properly be number', () => {

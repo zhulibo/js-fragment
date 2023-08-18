@@ -1,4 +1,4 @@
-import { deepCopy } from '../src/deepCopy'
+import { deepCopy } from '../src/fragment/deepCopy'
 
 describe('test deepCopy', () => {
   test('should support number', () => {

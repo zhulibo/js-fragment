@@ -1,9 +1,9 @@
 {
   "name": "js-fragment",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "pure js function",
   "type": "module",
-  "main": "./lib/index.cjs.js",
+  "main": "./lib/index.cjs.cjs",
   "module": "./lib/index.es.js",
   "types": "./lib/types/index.d.ts",
   "scripts": {

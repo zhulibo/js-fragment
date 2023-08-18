@@ -1,32 +1,18 @@
-import { dataUrl2Blob } from './dataUrl2Blob'
-import { debounce } from './debounce'
-import { deepCopy } from './deepCopy'
-import { generateUUID } from './generateUUID'
-import { getNodeIterator } from './getNodeIterator'
-import { getType } from './getType'
-import { loadCss } from './loadCss'
-import { loadJs } from './loadJs'
-import { throttle } from './throttle'
-import { to } from './to'
-import { wait } from './wait'
-
-export {
-  dataUrl2Blob,
-  debounce,
-  deepCopy,
-  generateUUID,
-  getNodeIterator,
-  getType,
-  loadCss,
-  loadJs,
-  throttle,
-  to,
-  wait,
-}
+export { dataUrl2Blob } from './fragment/dataUrl2Blob'
+export { debounce } from './fragment/debounce'
+export { deepCopy } from './fragment/deepCopy'
+export { generateUUID } from './fragment/generateUUID'
+export { getNodeIterator } from './fragment/getNodeIterator'
+export { getType } from './fragment/getType'
+export { loadCss } from './fragment/loadCss'
+export { loadJs } from './fragment/loadJs'
+export { throttle } from './fragment/throttle'
+export { to } from './fragment/to'
+export { wait } from './fragment/wait'
 
 // 手动修改版本号
 // npm run build
 // git add .
 // git commit -m '666'
 // npm publish
-// npm push
+// git push

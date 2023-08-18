@@ -1,4 +1,4 @@
-import { generateUUID } from '../src/generateUUID'
+import { generateUUID } from '../src/fragment/generateUUID'
 
 describe('test generateUUID', () => {
   test('length should be 8', () => {

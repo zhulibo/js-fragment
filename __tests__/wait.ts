@@ -1,4 +1,4 @@
-import {wait} from "../src/wait"
+import {wait} from "../src/fragment/wait"
 
 describe('test wait', () => {
   test('should wait', () => {
