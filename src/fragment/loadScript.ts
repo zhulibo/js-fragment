@@ -1,9 +1,9 @@
 /**
- * Load js file by url.
+ * Load script by url.
  *
- * @param url - The url of the js file.
+ * @param url - The url of the script.
  */
-export function loadJs(url: string): Promise<Event> {
+export function loadScript(url: string): Promise<Event> {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
     script.type = 'text/javascript'

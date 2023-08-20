@@ -1,9 +1,9 @@
 /**
- * Loads css by css code or url into the document.
+ * Load style by code or url
  *
- * @param css - The css code or url.
+ * @param css - The style code or url.
  */
-export function loadCss(css: string): void {
+export function loadStyle(css: string): void {
   if(css.indexOf('http') === 0) {
     const link = document.createElement('link')
     link.type = 'text/css'

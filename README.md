@@ -26,9 +26,9 @@ getNodeIterator
 
 getType
 
-loadCss
+loadScript
 
-loadJs
+loadStyle
 
 throttle
 
